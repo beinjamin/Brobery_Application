@@ -1,4 +1,4 @@
-const mongoose = require('mongose');
+const mongoose = required('mongose');
 
 const category = mongoose.model(
     "Category",
@@ -6,13 +6,22 @@ const category = mongoose.model(
         {
             categoryName: {
                     type: "string",
-                    require: true,
+                    required: true,
                     unique:true,
 
             },
+            categoryDescription: {
+                type: String,
+                required:false
+
+            },
+            categoryImage: {
+                type: String
+            }
 
         })
 
-
-
-);
+    );
+    module.export = {
+    category,
+    };
